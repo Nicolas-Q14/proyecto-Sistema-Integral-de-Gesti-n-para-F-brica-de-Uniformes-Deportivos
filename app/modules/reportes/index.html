@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reportes — Portal Tela&Corte</title>
+<link rel="stylesheet" href="../../css/app.css">
+<link rel="stylesheet" href="reportes.css">
+</head>
+<body>
+
+<div class="portal">
+  <div id="sidebar-container"></div>
+
+  <main class="contenido">
+    <div class="topbar">
+      <div>
+        <span class="topbar__eyebrow">Módulo 05</span>
+        <h1>Reportes</h1>
+        <p>Informes de pedidos, producción, inventario y rendimiento general.</p>
+      </div>
+    </div>
+
+    <div class="tarjetas-kpi" id="kpi-reportes"></div>
+
+    <section class="panel">
+      <div class="panel__cab"><h2>Pedidos por estado</h2></div>
+      <div id="reporte-pedidos"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel__cab"><h2>Avance de producción</h2></div>
+      <div id="reporte-produccion"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel__cab"><h2>Alertas de inventario</h2></div>
+      <div class="tabla-wrap">
+        <table>
+          <thead><tr><th>Material</th><th>Disponible</th><th>Mínimo</th></tr></thead>
+          <tbody id="tabla-alertas"></tbody>
+        </table>
+        <p class="vacio" id="alertas-vacio" style="display:none;">No hay materiales por debajo del mínimo. Todo en orden.</p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="../../js/auth.js"></script>
+<script src="../../js/sidebar.js"></script>
+<script>
+  protegerPagina('../../login.html');
+  construirSidebar('reportes', '../../');
+</script>
+<script src="reportes.js"></script>
+</body>
+</html>

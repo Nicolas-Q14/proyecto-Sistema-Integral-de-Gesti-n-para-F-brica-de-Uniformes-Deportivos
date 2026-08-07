@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ingresar — Portal Tela&Corte</title>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div class="login-page">
+  <div class="login-page__marca">
+    <h1>Portal de gestión<br>Tela&Corte</h1>
+    <p>Pedidos, producción, inventario y reportes en un solo lugar, con seguimiento trazable de cada uniforme.</p>
+    <div class="medida"><span>Módulos activos</span><span>5</span></div>
+    <div class="medida"><span>Estado del sistema</span><span>Operativo</span></div>
+  </div>
+
+  <div class="login-page__form">
+    <div class="login-box">
+      <h2>Bienvenido de nuevo</h2>
+      <p>Ingresa con tu usuario y contraseña asignados.</p>
+
+      <p class="error-login" id="error-login">Usuario o contraseña incorrectos.</p>
+
+      <form id="form-login">
+        <div class="campo">
+          <label for="usuario">Usuario</label>
+          <input type="text" id="usuario" required placeholder="admin">
+        </div>
+        <div class="campo">
+          <label for="clave">Contraseña</label>
+          <input type="password" id="clave" required placeholder="••••••">
+        </div>
+        <button type="submit" class="btn btn--primario">Ingresar</button>
+      </form>
+
+      <div class="login-box__demo">
+        Usuarios demo del prototipo:<br>
+        admin / produccion / inventario — contraseña: 1234
+      </div>
+
+      <p style="margin-top:20px;"><a href="../tienda/index.html" class="btn--fantasma btn" style="width:100%;text-align:center;">← Volver a la tienda</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="js/auth.js"></script>
+<script>
+  document.getElementById('form-login').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const usuario = document.getElementById('usuario').value;
+    const clave = document.getElementById('clave').value;
+    const error = document.getElementById('error-login');
+
+    if (iniciarSesion(usuario, clave)) {
+      window.location.href = 'dashboard.html';
+    } else {
+      error.style.display = 'block';
+    }
+  });
+</script>
+</body>
+</html>

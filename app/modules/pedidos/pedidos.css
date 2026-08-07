@@ -1,0 +1,9 @@
+/* pedidos.css — ajustes visuales exclusivos de este módulo.
+   Los estilos generales (tablas, tarjetas, formularios) viven
+   en app/css/app.css para que no se dupliquen entre módulos. */
+
+#filtro-estado {
+  font-family: var(--font-dato);
+  font-size: .78rem;
+  padding: 8px 10px;
+}

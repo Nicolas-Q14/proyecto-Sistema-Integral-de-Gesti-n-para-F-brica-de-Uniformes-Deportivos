@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Producción — Portal Tela&Corte</title>
+<link rel="stylesheet" href="../../css/app.css">
+<link rel="stylesheet" href="produccion.css">
+</head>
+<body>
+
+<div class="portal">
+  <div id="sidebar-container"></div>
+
+  <main class="contenido">
+    <div class="topbar">
+      <div>
+        <span class="topbar__eyebrow">Módulo 02</span>
+        <h1>Producción</h1>
+        <p>Planifica tareas, define tiempos y da seguimiento al avance de cada pedido.</p>
+      </div>
+    </div>
+
+    <div class="tarjetas-kpi" id="kpi-produccion"></div>
+
+    <section class="panel">
+      <div class="panel__cab">
+        <h2>Nueva tarea de producción</h2>
+      </div>
+      <form id="form-tarea">
+        <div class="form-grid">
+          <div class="campo">
+            <label for="t-pedido">Pedido asociado</label>
+            <input type="text" id="t-pedido" required placeholder="Ej. #0001 o nombre del cliente">
+          </div>
+          <div class="campo">
+            <label for="t-tarea">Tarea</label>
+            <input type="text" id="t-tarea" required placeholder="Ej. Corte de tela">
+          </div>
+          <div class="campo">
+            <label for="t-tiempo">Tiempo estimado (días)</label>
+            <input type="number" id="t-tiempo" min="1" required placeholder="Ej. 5">
+          </div>
+          <div class="campo">
+            <label for="t-avance">Avance inicial (%)</label>
+            <input type="number" id="t-avance" min="0" max="100" value="0">
+          </div>
+          <div class="campo">
+            <label for="t-estado">Estado</label>
+            <select id="t-estado">
+              <option>Por iniciar</option>
+              <option>En proceso</option>
+              <option>Finalizado</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn--primario btn--sm">Asignar tarea</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="panel__cab">
+        <h2>Tablero de avance</h2>
+      </div>
+      <div class="kanban" id="kanban-produccion"></div>
+    </section>
+  </main>
+</div>
+
+<script src="../../js/auth.js"></script>
+<script src="../../js/sidebar.js"></script>
+<script>
+  protegerPagina('../../login.html');
+  construirSidebar('produccion', '../../');
+</script>
+<script src="produccion.js"></script>
+</body>
+</html>

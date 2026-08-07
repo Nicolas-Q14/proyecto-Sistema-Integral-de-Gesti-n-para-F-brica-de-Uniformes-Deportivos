@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto — Tela&Corte</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="contenedor header__barra">
+    <a href="index.html" class="marca">Tela<span>&</span>Corte</a>
+    <nav class="nav">
+      <ul class="nav__lista">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Quiénes somos</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="header__acciones">
+      <a href="../app/login.html" class="btn btn--portal">Portal empresarial →</a>
+    </div>
+  </div>
+  <div class="linea-corte"></div>
+</header>
+
+<main>
+  <section class="seccion">
+    <div class="contenedor">
+      <div class="seccion__cab">
+        <div>
+          <span class="seccion__eyebrow">Hablemos</span>
+          <h2>Cotiza tu pedido</h2>
+          <p>Cuéntanos qué necesitas y te respondemos con una cotización en máximo 48 horas.</p>
+        </div>
+      </div>
+
+      <div class="contacto-grid">
+        <form id="form-contacto">
+          <div class="form-campo">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" required placeholder="Tu nombre">
+          </div>
+          <div class="form-campo">
+            <label for="empresa">Empresa / Institución</label>
+            <input type="text" id="empresa" placeholder="Nombre de la empresa (opcional)">
+          </div>
+          <div class="form-campo">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" required placeholder="tucorreo@empresa.com">
+          </div>
+          <div class="form-campo">
+            <label for="tipo">Tipo de uniforme</label>
+            <select id="tipo">
+              <option>Escolar</option>
+              <option>Industrial</option>
+              <option>Corporativo</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="form-campo">
+            <label for="cantidad">Cantidad aproximada</label>
+            <input type="number" id="cantidad" min="1" placeholder="Ej. 50">
+          </div>
+          <div class="form-campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" placeholder="Cuéntanos detalles de tu pedido"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primario">Enviar solicitud</button>
+          <p id="contacto-mensaje-estado" style="display:none;margin-top:14px;color:var(--color-hilo-verde);font-size:.9rem;"></p>
+        </form>
+
+        <div class="contacto-info">
+          <div class="contacto-info__item">
+            <div class="contacto-info__icono">@</div>
+            <div><strong>Correo</strong><p>contacto@telaycorte.com</p></div>
+          </div>
+          <div class="contacto-info__item">
+            <div class="contacto-info__icono">☎</div>
+            <div><strong>Teléfono</strong><p>+57 300 000 0000</p></div>
+          </div>
+          <div class="contacto-info__item">
+            <div class="contacto-info__icono">⚑</div>
+            <div><strong>Taller</strong><p>Bogotá D.C., Colombia</p></div>
+          </div>
+          <div class="hero__panel" style="margin-top:10px;">
+            <h3>¿Ya tienes un pedido activo?</h3>
+            <p style="font-size:.85rem;color:rgba(251,249,243,.8);margin-bottom:16px;">Ingresa al portal empresarial para ver el estado exacto de tu pedido.</p>
+            <a href="../app/login.html" class="btn btn--acento">Ir al portal</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="contenedor">
+    <div class="footer__grid">
+      <div><h4>Tela&Corte</h4><p>Taller de confección especializado en uniformes escolares, industriales y corporativos.</p></div>
+      <div><h4>Empresa</h4><ul><li><a href="nosotros.html">Quiénes somos</a></li><li><a href="productos.html">Productos</a></li></ul></div>
+      <div><h4>Soporte</h4><ul><li><a href="contacto.html">Contacto</a></li><li><a href="../app/login.html">Portal empresarial</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li>Bogotá D.C., Colombia</li><li>contacto@telaycorte.com</li></ul></div>
+    </div>
+    <div class="footer__base"><span>© 2026 Tela&Corte — Proyecto final</span><span>Prototipo académico</span></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

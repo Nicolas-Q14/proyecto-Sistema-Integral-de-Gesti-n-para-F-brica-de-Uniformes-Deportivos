@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Administrativo — Portal Tela&Corte</title>
+<link rel="stylesheet" href="../../css/app.css">
+<link rel="stylesheet" href="administrativo.css">
+</head>
+<body>
+
+<div class="portal">
+  <div id="sidebar-container"></div>
+
+  <main class="contenido">
+    <div class="topbar">
+      <div>
+        <span class="topbar__eyebrow">Módulo 04</span>
+        <h1>Administrativo</h1>
+        <p>Gestión general del sistema: usuarios, roles y control de la información global.</p>
+      </div>
+    </div>
+
+    <div class="tarjetas-kpi" id="kpi-admin"></div>
+
+    <section class="panel">
+      <div class="panel__cab">
+        <h2>Nuevo usuario del sistema</h2>
+      </div>
+      <form id="form-usuario">
+        <div class="form-grid">
+          <div class="campo">
+            <label for="u-nombre">Nombre completo</label>
+            <input type="text" id="u-nombre" required placeholder="Nombre y apellido">
+          </div>
+          <div class="campo">
+            <label for="u-correo">Correo</label>
+            <input type="email" id="u-correo" required placeholder="correo@telaycorte.com">
+          </div>
+          <div class="campo">
+            <label for="u-rol">Rol</label>
+            <select id="u-rol">
+              <option>Administrador</option>
+              <option>Jefe de producción</option>
+              <option>Encargado de inventario</option>
+              <option>Vendedor</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="u-estado">Estado</label>
+            <select id="u-estado">
+              <option>Activo</option>
+              <option>Inactivo</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn--primario btn--sm">Crear usuario</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="panel__cab">
+        <h2>Usuarios del sistema</h2>
+      </div>
+      <div class="tabla-wrap">
+        <table>
+          <thead><tr><th>Nombre</th><th>Correo</th><th>Rol</th><th>Estado</th><th>Acciones</th></tr></thead>
+          <tbody id="tabla-usuarios"></tbody>
+        </table>
+        <p class="vacio" id="usuarios-vacio" style="display:none;">Aún no hay usuarios registrados.</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel__cab"><h2>Información global del sistema</h2></div>
+      <div class="form-grid">
+        <div class="campo"><label>Nombre de la empresa</label><input type="text" value="Tela&Corte S.A.S"></div>
+        <div class="campo"><label>Moneda</label><input type="text" value="COP"></div>
+        <div class="campo"><label>Zona horaria</label><input type="text" value="America/Bogota"></div>
+      </div>
+      <p style="font-size:.82rem;color:#8a8071;">Estos campos son de solo demostración en el prototipo.</p>
+    </section>
+  </main>
+</div>
+
+<script src="../../js/auth.js"></script>
+<script src="../../js/sidebar.js"></script>
+<script>
+  protegerPagina('../../login.html');
+  construirSidebar('administrativo', '../../');
+</script>
+<script src="administrativo.js"></script>
+</body>
+</html>

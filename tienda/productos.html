@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productos — Tela&Corte</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="contenedor header__barra">
+    <a href="index.html" class="marca">Tela<span>&</span>Corte</a>
+    <nav class="nav">
+      <ul class="nav__lista">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Quiénes somos</a></li>
+        <li><a href="productos.html" aria-current="page">Productos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="header__acciones">
+      <a href="../app/login.html" class="btn btn--portal">Portal empresarial →</a>
+    </div>
+  </div>
+  <div class="linea-corte"></div>
+</header>
+
+<main>
+  <section class="seccion">
+    <div class="contenedor">
+      <div class="seccion__cab">
+        <div>
+          <span class="seccion__eyebrow">Catálogo completo</span>
+          <h2>Nuestros productos</h2>
+          <p>Todo se confecciona por pedido. Los precios son por unidad y varían según cantidad y personalización.</p>
+        </div>
+      </div>
+
+      <div class="filtros">
+        <button class="filtro activo" data-categoria="todos">Todos</button>
+        <button class="filtro" data-categoria="escolar">Escolar</button>
+        <button class="filtro" data-categoria="industrial">Industrial</button>
+        <button class="filtro" data-categoria="corporativo">Corporativo</button>
+      </div>
+
+      <div class="productos-grid">
+        <article class="tarjeta-producto" data-categoria="escolar">
+          <div class="tarjeta-producto__img"><span class="tarjeta-producto__etiqueta">Escolar</span>01</div>
+          <div class="tarjeta-producto__body">
+            <h3>Uniforme diario escolar</h3>
+            <p>Camisa piqué + pantalón/falda en dacrón. Tallas 4 a 18.</p>
+            <div class="tarjeta-producto__pie"><span class="precio">$68.000 COP</span><a href="contacto.html" class="btn btn--acento">Cotizar</a></div>
+          </div>
+        </article>
+        <article class="tarjeta-producto" data-categoria="escolar">
+          <div class="tarjeta-producto__img"><span class="tarjeta-producto__etiqueta">Escolar</span>02</div>
+          <div class="tarjeta-producto__body">
+            <h3>Sudadero deportivo</h3>
+            <p>Buzo y pantalón en algodón perchado, logo bordado.</p>
+            <div class="tarjeta-producto__pie"><span class="precio">$74.000 COP</span><a href="contacto.html" class="btn btn--acento">Cotizar</a></div>
+          </div>
+        </article>
+        <article class="tarjeta-producto" data-categoria="industrial">
+          <div class="tarjeta-producto__img"><span class="tarjeta-producto__etiqueta">Industrial</span>03</div>
+          <div class="tarjeta-producto__body">
+            <h3>Overol industrial drill</h3>
+            <p>Alta resistencia, cintas reflectivas, bolsillos reforzados.</p>
+            <div class="tarjeta-producto__pie"><span class="precio">$94.500 COP</span><a href="contacto.html" class="btn btn--acento">Cotizar</a></div>
+          </div>
+        </article>
+        <article class="tarjeta-producto" data-categoria="industrial">
+          <div class="tarjeta-producto__img"><span class="tarjeta-producto__etiqueta">Industrial</span>04</div>
+          <div class="tarjeta-producto__body">
+            <h3>Chaqueta de seguridad</h3>
+            <p>Tela ignífuga bajo pedido, cierre y bolsillos reforzados.</p>
+            <div class="tarjeta-producto__pie"><span class="precio">$110.000 COP</span><a href="contacto.html" class="btn btn--acento">Cotizar</a></div>
+          </div>
+        </article>
+        <article class="tarjeta-producto" data-categoria="corporativo">
+          <div class="tarjeta-producto__img"><span class="tarjeta-producto__etiqueta">Corporativo</span>05</div>
+          <div class="tarjeta-producto__body">
+            <h3>Polo corporativo bordado</h3>
+            <p>Piqué premium, bordado de logo incluido en el precio.</p>
+            <div class="tarjeta-producto__pie"><span class="precio">$52.000 COP</span><a href="contacto.html" class="btn btn--acento">Cotizar</a></div>
+          </div>
+        </article>
+        <article class="tarjeta-producto" data-categoria="corporativo">
+          <div class="tarjeta-producto__img"><span class="tarjeta-producto__etiqueta">Corporativo</span>06</div>
+          <div class="tarjeta-producto__body">
+            <h3>Camisa formal corporativa</h3>
+            <p>Popelina antifluidos, corte entallado o clásico.</p>
+            <div class="tarjeta-producto__pie"><span class="precio">$86.000 COP</span><a href="contacto.html" class="btn btn--acento">Cotizar</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="contenedor">
+    <div class="footer__grid">
+      <div><h4>Tela&Corte</h4><p>Taller de confección especializado en uniformes escolares, industriales y corporativos.</p></div>
+      <div><h4>Empresa</h4><ul><li><a href="nosotros.html">Quiénes somos</a></li><li><a href="productos.html">Productos</a></li></ul></div>
+      <div><h4>Soporte</h4><ul><li><a href="contacto.html">Contacto</a></li><li><a href="../app/login.html">Portal empresarial</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li>Bogotá D.C., Colombia</li><li>contacto@telaycorte.com</li></ul></div>
+    </div>
+    <div class="footer__base"><span>© 2026 Tela&Corte — Proyecto final</span><span>Prototipo académico</span></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

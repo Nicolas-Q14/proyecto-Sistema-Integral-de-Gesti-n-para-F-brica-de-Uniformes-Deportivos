@@ -1,0 +1,39 @@
+/* =========================================================
+   VARIABLES.CSS — Fuente única de verdad del sistema visual
+   Concepto: taller de confección. Todo el sitio toma prestado
+   el lenguaje del oficio (tela, hilo, patrón, etiqueta de tela).
+   Si cambias un color aquí, cambia en TODO el proyecto.
+   ========================================================= */
+
+:root {
+  /* Paleta — inspirada en textiles de trabajo */
+  --color-lienzo: #EDE7D9;      /* fondo cálido, tela cruda */
+  --color-lienzo-alt: #E2DBC8;  /* variante para tarjetas/bandas */
+  --color-indigo: #223247;      /* azul denim oscuro — color primario */
+  --color-indigo-fuerte: #16212F;
+  --color-hilo: #C6862A;        /* ocre/mostaza — acento cálido */
+  --color-hilo-suave: #E4A94F;
+  --color-tinta: #211C17;       /* casi negro cálido — texto */
+  --color-hilo-rojo: #A23B2E;   /* alerta, tono chalk-red de sastre */
+  --color-hilo-verde: #4C7A5A;  /* éxito */
+  --color-blanco: #FBF9F3;
+
+  /* Tipografía */
+  --font-display: 'Space Grotesk', 'Archivo Black', sans-serif;
+  --font-cuerpo: 'Inter', -apple-system, sans-serif;
+  --font-dato: 'IBM Plex Mono', 'Courier New', monospace;
+
+  /* Escala */
+  --radius-s: 3px;
+  --radius-m: 6px;
+  --sombra: 0 4px 18px rgba(22, 33, 47, 0.12);
+
+  /* Línea de corte — motivo repetido en todo el sitio */
+  --linea-corte: repeating-linear-gradient(
+    90deg,
+    var(--color-tinta) 0px,
+    var(--color-tinta) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}

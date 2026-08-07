@@ -1,0 +1,20 @@
+/* reportes.css — barras horizontales simples para las estadísticas */
+
+.reporte-fila {
+  display: grid;
+  grid-template-columns: 140px 1fr 40px;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: .85rem;
+}
+.reporte-fila .barra-fondo {
+  background: var(--color-lienzo-alt);
+  border-radius: 999px;
+  height: 10px;
+  overflow: hidden;
+}
+.reporte-fila .barra-relleno {
+  height: 100%;
+  background: var(--color-hilo);
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventario — Portal Tela&Corte</title>
+<link rel="stylesheet" href="../../css/app.css">
+<link rel="stylesheet" href="inventario.css">
+</head>
+<body>
+
+<div class="portal">
+  <div id="sidebar-container"></div>
+
+  <main class="contenido">
+    <div class="topbar">
+      <div>
+        <span class="topbar__eyebrow">Módulo 03</span>
+        <h1>Inventario</h1>
+        <p>Controla materias primas y productos en stock, y genera alertas de escasez.</p>
+      </div>
+    </div>
+
+    <div class="tarjetas-kpi" id="kpi-inventario"></div>
+
+    <section class="panel">
+      <div class="panel__cab">
+        <h2>Registrar material</h2>
+      </div>
+      <form id="form-material">
+        <div class="form-grid">
+          <div class="campo">
+            <label for="i-nombre">Material</label>
+            <input type="text" id="i-nombre" required placeholder="Ej. Tela drill azul">
+          </div>
+          <div class="campo">
+            <label for="i-cantidad">Cantidad disponible</label>
+            <input type="number" id="i-cantidad" min="0" required placeholder="Ej. 120">
+          </div>
+          <div class="campo">
+            <label for="i-unidad">Unidad</label>
+            <select id="i-unidad">
+              <option>metros</option>
+              <option>unidades</option>
+              <option>kg</option>
+              <option>rollos</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="i-minimo">Stock mínimo</label>
+            <input type="number" id="i-minimo" min="0" required placeholder="Ej. 30">
+          </div>
+        </div>
+        <button type="submit" class="btn btn--primario btn--sm">Agregar material</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="panel__cab">
+        <h2>Movimiento de stock</h2>
+      </div>
+      <form id="form-movimiento" class="form-grid" style="align-items:end;">
+        <div class="campo">
+          <label for="m-material">Material</label>
+          <select id="m-material"></select>
+        </div>
+        <div class="campo">
+          <label for="m-tipo">Tipo de movimiento</label>
+          <select id="m-tipo">
+            <option value="entrada">Entrada</option>
+            <option value="salida">Salida</option>
+          </select>
+        </div>
+        <div class="campo">
+          <label for="m-cantidad">Cantidad</label>
+          <input type="number" id="m-cantidad" min="1" required placeholder="Ej. 20">
+        </div>
+        <div class="campo">
+          <button type="submit" class="btn btn--acento btn--sm">Registrar movimiento</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="panel__cab">
+        <h2>Materias primas y stock</h2>
+      </div>
+      <div class="tabla-wrap">
+        <table>
+          <thead>
+            <tr><th>Material</th><th>Cantidad</th><th>Unidad</th><th>Mínimo</th><th>Estado</th><th>Acciones</th></tr>
+          </thead>
+          <tbody id="tabla-inventario"></tbody>
+        </table>
+        <p class="vacio" id="inventario-vacio" style="display:none;">Aún no hay materiales registrados.</p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="../../js/auth.js"></script>
+<script src="../../js/sidebar.js"></script>
+<script>
+  protegerPagina('../../login.html');
+  construirSidebar('inventario', '../../');
+</script>
+<script src="inventario.js"></script>
+</body>
+</html>

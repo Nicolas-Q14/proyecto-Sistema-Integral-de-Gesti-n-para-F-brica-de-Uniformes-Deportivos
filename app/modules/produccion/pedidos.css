@@ -1,0 +1,4 @@
+/* produccion.css — ajustes exclusivos del tablero de producción */
+
+.kanban__card .barra-progreso { margin-top: 8px; }
+.kanban__card .acciones-fila { margin-top: 10px; }
