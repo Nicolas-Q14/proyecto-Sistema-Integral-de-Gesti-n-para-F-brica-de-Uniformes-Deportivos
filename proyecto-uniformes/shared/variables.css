@@ -1,39 +1,44 @@
 /* =========================================================
    VARIABLES.CSS — Fuente única de verdad del sistema visual
-   Concepto: taller de confección. Todo el sitio toma prestado
-   el lenguaje del oficio (tela, hilo, patrón, etiqueta de tela).
-   Si cambias un color aquí, cambia en TODO el proyecto.
+   Concepto: tienda deportiva. Colores intensos, tipografía
+   condensada tipo camiseta/marcador, líneas en diagonal que
+   evocan velocidad y movimiento.
+   Si cambias un color aquí, cambia en TODO el proyecto
+   (tienda + portal), porque ambas hojas de estilo importan
+   este archivo.
    ========================================================= */
 
 :root {
-  /* Paleta — inspirada en textiles de trabajo */
-  --color-lienzo: #EDE7D9;      /* fondo cálido, tela cruda */
-  --color-lienzo-alt: #E2DBC8;  /* variante para tarjetas/bandas */
-  --color-indigo: #223247;      /* azul denim oscuro — color primario */
-  --color-indigo-fuerte: #16212F;
-  --color-hilo: #C6862A;        /* ocre/mostaza — acento cálido */
-  --color-hilo-suave: #E4A94F;
-  --color-tinta: #211C17;       /* casi negro cálido — texto */
-  --color-hilo-rojo: #A23B2E;   /* alerta, tono chalk-red de sastre */
-  --color-hilo-verde: #4C7A5A;  /* éxito */
-  --color-blanco: #FBF9F3;
+  /* Paleta — energía deportiva */
+  --color-lienzo: #F3F4F6;      /* fondo claro, tipo cancha/gimnasio */
+  --color-lienzo-alt: #E7E9ED;  /* variante para tarjetas/bandas */
+  --color-indigo: #101B2E;      /* azul marino casi negro — color primario */
+  --color-indigo-fuerte: #0A1220;
+  --color-hilo: #FF5A1F;        /* naranja eléctrico — acento principal */
+  --color-hilo-suave: #FF8A50;
+  --color-tinta: #12151A;       /* casi negro — texto */
+  --color-hilo-rojo: #E1222E;   /* alerta / rojo intenso */
+  --color-hilo-verde: #17A567;  /* éxito / verde cancha */
+  --color-blanco: #FFFFFF;
 
   /* Tipografía */
-  --font-display: 'Space Grotesk', 'Archivo Black', sans-serif;
+  --font-display: 'Oswald', 'Archivo Black', sans-serif; /* condensada, tipo dorsal de camiseta */
   --font-cuerpo: 'Inter', -apple-system, sans-serif;
-  --font-dato: 'IBM Plex Mono', 'Courier New', monospace;
+  --font-dato: 'IBM Plex Mono', 'Courier New', monospace; /* estilo marcador/estadística */
 
   /* Escala */
   --radius-s: 3px;
   --radius-m: 6px;
-  --sombra: 0 4px 18px rgba(22, 33, 47, 0.12);
+  --sombra: 0 4px 18px rgba(16, 27, 46, 0.16);
 
-  /* Línea de corte — motivo repetido en todo el sitio */
+  /* Franja diagonal — motivo de velocidad repetido en todo el sitio */
   --linea-corte: repeating-linear-gradient(
-    90deg,
-    var(--color-tinta) 0px,
-    var(--color-tinta) 6px,
-    transparent 6px,
-    transparent 12px
+    135deg,
+    var(--color-hilo) 0px,
+    var(--color-hilo) 10px,
+    var(--color-indigo) 10px,
+    var(--color-indigo) 20px
   );
 }
+
+/* Toda la tipografía de ti

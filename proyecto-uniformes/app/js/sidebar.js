@@ -26,7 +26,7 @@ function construirSidebar(moduloActivo, rutaBase) {
   contenedor.innerHTML = `
     <aside class="sidebar">
       <div>
-        <div class="sidebar__marca">Tela<span>&</span>Corte</div>
+        <div class="sidebar__marca">frenesi<span>&</span>Sport</div>
         <div class="sidebar__sub">Portal empresarial</div>
       </div>
       <nav class="sidebar__nav">${enlaces}</nav>
