@@ -3,7 +3,7 @@
    funciones; el resto del portal no debería cambiar. */
 
 const USUARIOS_DEMO = [
-  { usuario: 'admin',      clave: '1234', nombre: 'Laura Ramírez',  rol: 'Administrador' },
+  { usuario: 'admin',      clave: '1234', nombre: 'Nicolas Quitian',  rol: 'Administrador' },
   { usuario: 'produccion', clave: '1234', nombre: 'Carlos Nieto',   rol: 'Jefe de producción' },
   { usuario: 'inventario', clave: '1234', nombre: 'Sofía Peña',     rol: 'Encargada de inventario' },
 ];

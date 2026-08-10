@@ -14,18 +14,24 @@ function inicializarFiltrosProductos() {
   const tarjetas = document.querySelectorAll('.tarjeta-producto');
   if (!filtros.length) return;
 
-  filtros.forEach(filtro => {
-    filtro.addEventListener('click', () => {
-      filtros.forEach(f => f.classList.remove('activo'));
-      filtro.classList.add('activo');
-      const categoria = filtro.dataset.categoria;
-
-      tarjetas.forEach(tarjeta => {
-        const coincide = categoria === 'todos' || tarjeta.dataset.categoria === categoria;
-        tarjeta.style.display = coincide ? '' : 'none';
-      });
+  function aplicarFiltro(categoria) {
+    filtros.forEach(f => f.classList.toggle('activo', f.dataset.categoria === categoria));
+    tarjetas.forEach(tarjeta => {
+      const coincide = categoria === 'todos' || tarjeta.dataset.categoria === categoria;
+      tarjeta.style.display = coincide ? '' : 'none';
     });
+  }
+
+  filtros.forEach(filtro => {
+    filtro.addEventListener('click', () => aplicarFiltro(filtro.dataset.categoria));
   });
+
+  // si se llegó desde el home con ?cat=futbol, por ejemplo, se aplica de una vez
+  const params = new URLSearchParams(window.location.search);
+  const catInicial = params.get('cat');
+  if (catInicial && document.querySelector(`.filtro[data-categoria="${catInicial}"]`)) {
+    aplicarFiltro(catInicial);
+  }
 }
 
 /* ---------- Formulario de contacto (simulado, sin backend aún) ---------- */
